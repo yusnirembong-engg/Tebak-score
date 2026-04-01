@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Tebak Skor Bola | Prediksi Skor Akurat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Pattern -->
+    <div class="bg-pattern"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-futbol"></i>
+                </div>
+                <div class="logo-text">TEBAK <span>SKOR BOLA</span></div>
+            </div>
+            <p class="tagline">Prediksi skor pertandingan favoritmu dan raih poin tertinggi!</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Info Panel -->
+        <div class="info-panel">
+            <div class="score-card">
+                <div class="score-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="score-info">
+                    <h4>Total Poin Kamu</h4>
+                    <div class="total-points" id="totalPoints">0</div>
+                </div>
+            </div>
+            <div class="rules-card">
+                <i class="fas fa-info-circle"></i>
+                <span>Skor tepat = 3 poin | Tebak pemenang benar = 1 poin</span>
+            </div>
+        </div>
+
+        <!-- Pertandingan Grid -->
+        <div class="matches-grid" id="matchesGrid">
+            <!-- Match cards akan di-generate oleh JavaScript -->
+        </div>
+
+        <!-- Tombol Aksi -->
+        <div class="action-buttons">
+            <button class="btn btn-primary" id="submitAllBtn">
+                <i class="fas fa-paper-plane"></i> Kirim Semua Tebakan
+            </button>
+            <button class="btn btn-secondary" id="resetAllBtn">
+                <i class="fas fa-undo-alt"></i> Reset Semua
+            </button>
+            <button class="btn btn-danger" id="clearDataBtn">
+                <i class="fas fa-trash-alt"></i> Hapus Semua Data
+            </button>
+        </div>
+
+        <!-- Leaderboard -->
+        <div class="leaderboard-section">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-line"></i> Leaderboard</h2>
+                <button class="btn-reset-leaderboard" id="resetLeaderboardBtn" title="Reset Leaderboard">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+            <div class="leaderboard-container">
+                <div class="leaderboard-table" id="leaderboardTable">
+                    <div class="leaderboard-empty">
+                        <i class="fas fa-chart-simple"></i>
+                        <p>Belum ada data. Kirim tebakan pertama kamu!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-icon"></div>
+        <div class="toast-message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
